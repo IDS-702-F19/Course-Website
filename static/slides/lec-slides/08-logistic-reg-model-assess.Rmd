@@ -75,7 +75,7 @@ class: center, middle
 
 
 ---
-## Predicting nba wins
+## Predicting NBA wins
 
 - Let's fit a logistic regression with one predictor to NBA data for 4 seasons from the 2014/2015 season to the 2017/2018 season.
 
@@ -89,7 +89,7 @@ class: center, middle
 
 
 ---
-## Predicting nba wins
+## Predicting NBA wins
 
 ```{r fig.height=3}
 nba <- read.csv("data/nba_games_stats_reduced.csv",header=T)
@@ -101,7 +101,7 @@ summary(nba[,-4])
 
 
 ---
-## Predicting nba wins
+## Predicting NBA wins
 
 .block[
 .small[
@@ -310,7 +310,7 @@ binnedplot(nba$Opp,residuals(nbareg,"resp"),xlab="Opponent's points (centered)",
 ---
 ## NBA analysis
 
-Let's look at the confusion matrix for the nba data. Load the .hlight[arm] and .hlight[e1071] packages.
+Let's look at the confusion matrix for the NBA data. Load the .hlight[arm] and .hlight[e1071] packages.
 
 
 ```{r fig.height=3,message=F}
@@ -739,7 +739,7 @@ $$
 - For a logistic regression, the change in deviance test statistic is defined as:
 .block[
 .small[
-$$D = 2 \left(\sum_{i=1}^n \left[y_i \textrm{log}(\hat{\pi}_{1i}) + (1-y_i) \textrm{log}(1-\hat{\pi}_{1i})\right] - \sum_{i=1}^n \left[y_i \textrm{log}(\hat{\pi}_{2i}) + (1-y_i) \textrm{log}(1-\hat{\pi}_{2i})\right] \right)$$
+$$D = - 2 \left(\sum_{i=1}^n \left[y_i \textrm{log}(\hat{\pi}_{1i}) + (1-y_i) \textrm{log}(1-\hat{\pi}_{1i})\right] - \sum_{i=1}^n \left[y_i \textrm{log}(\hat{\pi}_{2i}) + (1-y_i) \textrm{log}(1-\hat{\pi}_{2i})\right] \right)$$
 ]
 ]
 
